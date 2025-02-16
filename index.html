@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت تغذیه بیماران دیالیزی</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>مدیریت تغذیه بیماران دیالیزی</h1>
+        </div>
+
+        <div class="nav">
+            <button onclick="navigateTo('dashboard.html')" class="active">داشبورد</button>
+            <button onclick="navigateTo('education.html')">آموزش</button>
+            <button onclick="navigateTo('food-list.html')">لیست مواد غذایی</button>
+            <button onclick="navigateTo('add-food.html')">افزودن غذا</button>
+            <button onclick="navigateTo('history.html')">تاریخچه</button>
+            <button onclick="navigateTo('settings.html')">تنظیمات</button>
+        </div>
+
+        <!-- Content will be loaded dynamically -->
+        <div id="content"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Initial load
+        window.onload = () => {
+            navigateTo('dashboard.html');
+        };
+    </script>
+</body>
+</html>
